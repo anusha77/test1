@@ -1,13 +1,27 @@
-<!DOCTYPE html?
-<html ng-app="myFirstApp">
-  <head>
+<!DOCTYPE html>
+<html ng-app="FirstProjApp">
+  <head >
     <meta charset="utf-8">
     <title> First Angular application </title>
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
-    <h1> Hello You</h1>
-     <div ng-controller = "MyFirstController">
+
+     <div ng-controller = "ProjectController">
+       <div >
+         <input type="text" ng-model = "stringInput">
+         <button ng-click = "countEls()" text = "Click">Check If too much</button>
+
+          <br>
+          <input type="text" ng-model = "msg">
+
+         <div> {{ sayReplaceMsg() }} </div>
+         <br>
+         <div> {{ sayReplaceMsg() | truth : 'on' : 'letit'}} </div>
+
+          <div> {{ sayReplaceMsg() | truth : 'on' : 'letit' | uppercase}} </div>
+       </div>
+     </div>
   </body>
 </html>
